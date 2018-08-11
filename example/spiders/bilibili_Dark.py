@@ -36,7 +36,6 @@ class DarkReplies(scrapy.Spider):
     url_aid = "https://api.bilibili.com/x/v2/reply?jsonp=jsonp&type=1&sort=0&pn=1&oid="
     url_pn = "https://api.bilibili.com/x/v2/reply?jsonp=jsonp&type=1&sort=0&pn=1&oid="
     num1 = 1
-    num1 = 2
 
     def start_requests(self):
         db_name = self.settings.get("SQLITE_DB_NAME", "scrapy_defaut.db")
