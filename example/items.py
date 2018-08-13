@@ -30,4 +30,5 @@ class DarkRepliesItem(scrapy.Item):
     uname = scrapy.Field()
     message = scrapy.Field()
     root = scrapy.Field()
-    pn = scrapy.Field()
+    parent = scrapy.Field()
+    floor = scrapy.Field()

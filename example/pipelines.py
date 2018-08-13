@@ -34,9 +34,7 @@ class SQLitePipeline(object):
         # bug 数据有引号会解析失败
         # sql = 'INSERT INTO books (' + ','.join(item.keys()) + ") VALUES (\'" + '\',\''.join() + "'" + ')'
         sql = "INSERT INTO {0} ({1}) VALUES ({2})".format(table, ",".join(item.keys()), ",".join("?" * len(item)))
-
-        print (sql)
         self.db_cur.execute(sql, item.values())
 
         # 每插入一条就commit一次会影响效率
-        # self.db_conn.commit()
+        self.db_conn.commit()
